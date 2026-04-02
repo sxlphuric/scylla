@@ -36,8 +36,10 @@ Coming soon!
 ## Dependencies
 
 - [ImGui](https://github.com/ocornut/imgui)
-- [C++](#)
-- [GLFW i think idk im not a graphics guy](#)
+- [C++](#) **23** or later
+- [GLFW](#) **3.18**
+- [CMake](#) **3.16**
+- [OpenGL](#)
 
 ## Building
 
