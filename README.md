@@ -82,7 +82,17 @@ cd scylla
 
 ### 3. Building
 
-Build and install the package with `make`:
+Build the package with CMake:
+
+```fish
+# Configure build folder
+cmake -S . -B build
+
+# Build project
+cmake --build build
+```
+
+### 4. Running
 
 `IDK how to do TS`
 
