@@ -236,7 +236,7 @@ int main(int, char **) {
       static int counter = 0;
 
       ImGui::SetNextWindowPos(ImVec2(0,0));
-      ImGui::Begin("Scylla", nullptr, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize);
+      ImGui::Begin("Scylla", nullptr, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoDocking);
       // ImGui::TextColored(style.Colors[ImGuiCol_TitleBgActive], "Scylla"),
 
       ImGui::TextDisabled("%.1f FPS", io.Framerate);
