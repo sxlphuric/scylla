@@ -10,7 +10,7 @@
 
 <!---- ![Version](https://img.shields.io/badge/version-0.1.0-yellow) ---->
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/sxlphuric/scylla?style=flat)
-![CI](https://img.shields.io/github/actions/workflow/status/sxlphuric/scylla/cpp.yml?label=CI&style=flat)
+![CI](https://img.shields.io/github/actions/workflow/status/sxlphuric/scylla/cmake-cpp.yml?label=CI&style=flat)
 ![Stars](https://img.shields.io/github/stars/sxlphuric/scylla?style=flat)
 
 [Installation](#Building) • [Roadmap](#Roadmap) • [Structure](#Structure)
