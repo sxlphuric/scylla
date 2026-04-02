@@ -6,7 +6,7 @@
 
 **A fast and nonchalant system monitor**
 
-*Made in C++ and ImGui*
+*Made with C++ and ImGui*
 
 <!---- ![Version](https://img.shields.io/badge/version-0.1.0-yellow) ---->
 ![Commit Activity](https://img.shields.io/github/commit-activity/m/sxlphuric/scylla?style=flat)
