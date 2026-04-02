@@ -37,7 +37,7 @@ Coming soon!
 
 - [ImGui](https://github.com/ocornut/imgui)
 - [C++](#) **23** or later
-- [GLFW](#) **3.18**
+- [GLFW3](#) **3.3.8**
 - [CMake](#) **3.16**
 - [OpenGL](#)
 
