@@ -14,7 +14,7 @@ FetchContent_MakeAvailable(glfw)
 find_package(OpenGL REQUIRED)
 
 # TODO use fetchcontent for IMGUI too (obviously)
-set(IMGUI_VERSION 1.92.6)
+set(IMGUI_VERSION 1.92.6-docking)
 
 include(FetchContent)
 FetchContent_Declare(imgui URL https://github.com/ocornut/imgui/archive/refs/tags/v${IMGUI_VERSION}.zip)
