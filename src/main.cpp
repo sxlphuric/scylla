@@ -241,8 +241,6 @@ int main(int, char **) {
 
       ImGui::TextDisabled("%.1f FPS", io.Framerate);
 
-      ImGui::SameLine(); ImGui::TextDisabled("%.1f FPS", io.Framerate); // Display some text (you can
-                                                // use a format strings too)
       ImGui::Checkbox(
           "Demo Window",
           &show_demo_window); // Edit bools storing our window open/close state
