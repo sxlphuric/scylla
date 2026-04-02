@@ -8,8 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_BUILD_TYPE Debug)
 
 include(FetchContent)
-FetchContent_Declare(glfw3 URL https://github.com/glfw/glfw/releases/download/3.4/glfw-3.4.zip)
-FetchContent_MakeAvailable(glfw3)
+FetchContent_Declare(glfw URL https://github.com/glfw/glfw/releases/download/3.4/glfw-3.4.zip)
+FetchContent_MakeAvailable(glfw)
 
 find_package(glfw3 REQUIRED)
 find_package(OpenGL REQUIRED)
@@ -34,6 +34,5 @@ target_include_directories(Scylla PRIVATE
     ${IMGUI_DIR}
     ${IMGUI_DIR}/backends
 )
-
 
 target_link_libraries(Scylla PRIVATE glfw OpenGL::GL)
