@@ -230,8 +230,9 @@ int main(int, char **) {
       static float f = 0.0f;
       static int counter = 0;
 
-      ImGui::Begin("Scylla"); // Create a window called "Hello, world!"
-                                     // and append into it.
+      ImGui::SetNextWindowPos(ImVec2(0,0));
+      ImGui::Begin("Scylla", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize);
+      ImGui::TextColored(clear_color, "Scylla"),
 
       ImGui::Text("%.1f FPS", io.Framerate); // Display some text (you can
                                                 // use a format strings too)
