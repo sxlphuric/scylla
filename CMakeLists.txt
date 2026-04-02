@@ -13,6 +13,7 @@ FetchContent_MakeAvailable(glfw)
 
 find_package(OpenGL REQUIRED)
 
+# TODO use fetchcontent for IMGUI too (obviously)
 set(IMGUI_VERSION 1.92.6)
 
 set(IMGUI_DIR "${CMAKE_CURRENT_SOURCE_DIR}/imgui-${IMGUI_VERSION}")
