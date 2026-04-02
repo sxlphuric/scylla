@@ -234,7 +234,7 @@ int main(int, char **) {
       ImGui::Begin("Scylla", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize);
       ImGui::TextColored(clear_color, "Scylla"),
 
-      ImGui::Text("%.1f FPS", io.Framerate); // Display some text (you can
+      ImGui::SameLine(); ImGui::TextDisabled("%.1f FPS", io.Framerate); // Display some text (you can
                                                 // use a format strings too)
       ImGui::Checkbox(
           "Demo Window",
