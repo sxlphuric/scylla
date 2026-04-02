@@ -77,7 +77,7 @@ Clone the repository to your local machine. This can be done with
 git clone https://github.com/sxlphuric/scylla.git
 
 # Go into the repository's folder
-cd replay-manager
+cd scylla
 ```
 
 ### 3. Building
