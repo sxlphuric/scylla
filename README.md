@@ -34,12 +34,17 @@ Coming soon!
 
 ---
 
-## Dependencies
+## Prerequisites
 
 - [ImGui](https://github.com/ocornut/imgui) **1.92.6**
 - [C++](#) **23** or later
 - [GLFW](#) **3.4**
 - [CMake](#) **3.16**
+- [GLFW](#) **3.4**
+
+## Dependencies
+
+- [ImGui](https://github.com/ocornut/imgui) **1.92.6**
 - [OpenGL](#)
 
 ## Building
