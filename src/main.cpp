@@ -236,8 +236,10 @@ int main(int, char **) {
       static int counter = 0;
 
       ImGui::SetNextWindowPos(ImVec2(0,0));
-      ImGui::Begin("Scylla", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize);
-      ImGui::TextColored(clear_color, "Scylla"),
+      ImGui::Begin("Scylla", nullptr, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize);
+      // ImGui::TextColored(style.Colors[ImGuiCol_TitleBgActive], "Scylla"),
+
+      ImGui::TextDisabled("%.1f FPS", io.Framerate);
 
       ImGui::SameLine(); ImGui::TextDisabled("%.1f FPS", io.Framerate); // Display some text (you can
                                                 // use a format strings too)
