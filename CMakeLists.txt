@@ -16,15 +16,18 @@ find_package(OpenGL REQUIRED)
 # TODO use fetchcontent for IMGUI too (obviously)
 set(IMGUI_VERSION 1.92.6)
 
-set(IMGUI_DIR "${CMAKE_CURRENT_SOURCE_DIR}/imgui-${IMGUI_VERSION}")
+include(FetchContent)
+FetchContent_Declare(imgui URL https://github.com/ocornut/imgui/archive/refs/tags/v${IMGUI_VERSION}.zip)
+FetchContent_MakeAvailable(imgui)
+
 set(IMGUI_SOURCES
-    ${IMGUI_DIR}/imgui.cpp
-    ${IMGUI_DIR}/imgui_draw.cpp
-    ${IMGUI_DIR}/imgui_tables.cpp
-    ${IMGUI_DIR}/imgui_widgets.cpp
-    ${IMGUI_DIR}/imgui_demo.cpp # TEMPORARY while i figure out how to use imgui
-    ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp
-    ${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp
+    ${imgui_SOURCE_DIR}/imgui.cpp
+    ${imgui_SOURCE_DIR}/imgui_draw.cpp
+    ${imgui_SOURCE_DIR}/imgui_tables.cpp
+    ${imgui_SOURCE_DIR}/imgui_widgets.cpp
+    ${imgui_SOURCE_DIR}/imgui_demo.cpp # TEMPORARY while i figure out how to use imgui
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_glfw.cpp
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
 )
 
 add_executable(Scylla
@@ -33,8 +36,8 @@ add_executable(Scylla
 )
 
 target_include_directories(Scylla PRIVATE
-    ${IMGUI_DIR}
-    ${IMGUI_DIR}/backends
+    ${imgui_SOURCE_DIR}
+    ${imgui_SOURCE_DIR}/backends
 )
 
 target_link_libraries(Scylla PRIVATE glfw OpenGL::GL)
