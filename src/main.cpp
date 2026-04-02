@@ -230,10 +230,10 @@ int main(int, char **) {
       static float f = 0.0f;
       static int counter = 0;
 
-      ImGui::Begin("Hello, world!"); // Create a window called "Hello, world!"
+      ImGui::Begin("Scylla"); // Create a window called "Hello, world!"
                                      // and append into it.
 
-      ImGui::Text("This is some useful text."); // Display some text (you can
+      ImGui::Text("%.1f FPS", io.Framerate); // Display some text (you can
                                                 // use a format strings too)
       ImGui::Checkbox(
           "Demo Window",
