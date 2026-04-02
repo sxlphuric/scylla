@@ -221,6 +221,8 @@ int main(int, char **) {
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
+    ImGui::PushStyleColor(ImGuiCol_WindowBg, window_bg_color);
+
     // 1. Show the big demo window (Most of the sample code is in
     // ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear
     // ImGui!).
@@ -273,6 +275,8 @@ int main(int, char **) {
         show_another_window = false;
       ImGui::End();
     }
+
+    ImGui::PopStyleColor();
 
     // Rendering
     ImGui::Render();
