@@ -78,9 +78,9 @@ git clone https://github.com/sxlphuric/scylla.git
 cd scylla
 ```
 
-### 3. Building
+### 3. Building and installation
 
-Build the package with CMake:
+Build and install the package with CMake:
 
 ```fish
 # Configure build folder
@@ -88,11 +88,12 @@ cmake -S . -B build
 
 # Build project
 cmake --build build
+
+# Install project
+cmake --install build
 ```
 
-### 4. Running
-
-Now run the executable `Scylla` located in the build folder.
+You should now be able to run `Scylla` to open the application.
 
 ## Roadmap
 - [ ] Do something
