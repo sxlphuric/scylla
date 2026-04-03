@@ -176,7 +176,8 @@ int main(int, char **) {
   ImVec4 clear_color = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
   ImVec4 window_bg_color = ImVec4(0.00f, 0.00f, 0.00f, 0.70f);
 
-  bool fahrenheit = false;
+  /*
+    bool fahrenheit = false;
   float cpu_temp_celsius = 0;
   float memory_usage = 0;
   float cpu_usage = 0;
@@ -187,8 +188,7 @@ int main(int, char **) {
   float used_disk_space = 0;
 
   int cpu_cores_amount = 0;
-
-  float fps = io.Framerate;
+  */
 
   // Main loop
 #ifdef __EMSCRIPTEN__
@@ -239,7 +239,7 @@ int main(int, char **) {
       ImGui::Begin("Scylla", nullptr, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoDocking);
       // ImGui::TextColored(style.Colors[ImGuiCol_TitleBgActive], "Scylla"),
 
-      ImGui::TextDisabled("%.1f FPS", io.Framerate);
+      ImGui::TextDisabled("%f FPS", io.Framerate);
 
       ImGui::Checkbox(
           "Demo Window",
