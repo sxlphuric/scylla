@@ -2,9 +2,9 @@
 
 ### Scylla
 
-<!---![ReplayManagerIcon](https://github.com/sxlphuric/replay-manager/blob/main/assets/icon_256.png?raw=true)--->
+![ScyllaIcon](https://github.com/sxlphuric/scylla/blob/main/assets/icon_256.png?raw=true)
 
-**A fast and nonchalant system monitor**
+**A fast and customizable system monitor**
 
 *Made with C++ and ImGui*
 
@@ -22,7 +22,7 @@
 ## Overview
 
 <!-- TODO Yeaaaaaahhhhhhh..... -->
-Scylla is a nonchalant system monitor built using **C++** and **ImGui**. It's goal is to be a fast and dependable system monitor that does not fret.
+Scylla is a nonchalant system monitor built using **C++** and **ImGui**. It's goal is to be a fast and dependable system monitor that does not compromise on customizability.
 
 ### Key Features
 
