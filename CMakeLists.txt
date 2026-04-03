@@ -46,3 +46,5 @@ target_include_directories(Scylla PRIVATE
 )
 
 target_link_libraries(Scylla PRIVATE glfw OpenGL::GL)
+
+install(TARGETS Scylla)
