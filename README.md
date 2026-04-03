@@ -96,6 +96,23 @@ cmake --install build
 You should now be able to run `Scylla` to open the application.
 
 ## Roadmap
-- [ ] Do something
+- [ ] Get project in a working state: Query at least CPU and MEMORY info.
+    - [ ] Crossplatform
+- [ ] Find a way to add settings
+- [ ] Graphs
 ### TODO
-- Hi
+- CPU
+    - temp
+    - usage
+- mem
+    - max
+    - temp
+    - usage
+- diskspace
+    - max
+    - usage
+    - percent
+- net
+    - usage
+    - down
+    - up  
