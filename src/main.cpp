@@ -239,7 +239,7 @@ int main(int, char **) {
       ImGui::Begin("Scylla", nullptr, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoDocking);
       // ImGui::TextColored(style.Colors[ImGuiCol_TitleBgActive], "Scylla"),
 
-      ImGui::TextDisabled("%f FPS", io.Framerate);
+      ImGui::TextDisabled("%.0f FPS", io.Framerate);
 
       ImGui::Checkbox(
           "Demo Window",
