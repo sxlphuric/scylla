@@ -2,6 +2,11 @@
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
+
+// my sysmon headers
+#include "CpuMonitor.hpp"
+
+// c++ core
 #include <stdio.h>
 
 // glfw stuff
