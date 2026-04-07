@@ -35,14 +35,20 @@ set(IMGUI_SOURCES
     ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
 )
 
+set(SCYLLA_SOURCES
+    src/main.cpp
+    src/CpuMonitor.cpp
+)
+
 add_executable(Scylla
     ${IMGUI_SOURCES}
-    src/main.cpp
+    ${SCYLLA_SOURCES}
 )
 
 target_include_directories(Scylla PRIVATE
     ${imgui_SOURCE_DIR}
     ${imgui_SOURCE_DIR}/backends
+    src
 )
 
 target_link_libraries(Scylla PRIVATE glfw OpenGL::GL)
