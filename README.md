@@ -22,11 +22,12 @@
 ## Overview
 
 <!-- TODO Yeaaaaaahhhhhhh..... -->
-Scylla is a nonchalant system monitor built using **C++** and **ImGui**. It's goal is to be a fast and dependable system monitor that does not compromise on customizability.
+Scylla is a fast and customizable system monitor built using **C++** and **ImGui**. It's goal is to be a fast and dependable system monitor that does not compromise on customizability.
 
 ### Key Features
 
-- ❓ **TBD** - The project does not actually exist yet
+- ⚡ **Blazing Fast** - The app uses ImGui for speedy rendering
+- 💠 **All-in-one** - CPU usage, ....
 
 ## Screenshots
 
