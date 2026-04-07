@@ -169,7 +169,10 @@ int main(int, char **) {
     CpuMonitor CpuMonitor;
 
     float cpu_usage = 0;
-    static float last_cpu_update_time = 0.0f;
+
+    static float last_secondary_update_time = 0.0f;
+
+    float fps = io.Framerate;
 
   /*
     bool fahrenheit = false;
@@ -232,16 +235,17 @@ int main(int, char **) {
 
       float current_time = ImGui::GetTime();
 
-      if (current_time - last_cpu_update_time >= 1.0f) {
+      if (current_time - last_secondary_update_time >= 0.75f) {
           cpu_usage = CpuMonitor.get_usage();
-          last_cpu_update_time = current_time;
+          fps = io.Framerate;
+          last_secondary_update_time = current_time;
       }
 
       ImGui::SetNextWindowPos(ImVec2(0,0));
       ImGui::Begin("Scylla", nullptr, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoDocking);
       // ImGui::TextColored(style.Colors[ImGuiCol_TitleBgActive], "Scylla"),
 
-      ImGui::TextDisabled("%.0f FPS", io.Framerate);
+      ImGui::TextDisabled("%.0f FPS", fps);
 
       ImGui::Text("%.2f%% CPU", cpu_usage);
 
