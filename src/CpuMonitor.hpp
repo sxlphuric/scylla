@@ -1,6 +1,5 @@
 #include <vector>
 
-
 class CpuMonitor {
     private:
         size_t previous_idle;
