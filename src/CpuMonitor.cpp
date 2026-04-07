@@ -37,8 +37,8 @@ float CpuMonitor::get_usage() {
     for (size_t idle, total; get_cpu_times(idle, total);) {
 
         if (previous_idle == 0 || previous_total == 0) {
-            previous_idle = idle;
-            previous_total = total;
+            CpuMonitor::previous_idle = idle;
+            CpuMonitor::previous_total = total;
             return 0.0f;
         }
 
