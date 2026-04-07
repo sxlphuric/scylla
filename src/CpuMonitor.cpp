@@ -34,9 +34,16 @@ bool CpuMonitor::get_cpu_times(size_t &idle_time, size_t &total_time) {
 }
 
 float CpuMonitor::get_usage() {
-    for (size_t idle, total; get_cpu_times(idle, total); sleep(1)) {
-        const float idle_delta = idle - CpuMonitor::previous_idle;
-        const float total_delta = idle - CpuMonitor::previous_total;
+    for (size_t idle, total; get_cpu_times(idle, total);) {
+
+        if (previous_idle == 0 || previous_total == 0) {
+            previous_idle = idle;
+            previous_total = total;
+            return 0.0f;
+        }
+
+        const float idle_delta = idle - previous_idle;
+        const float total_delta = total - previous_total;
         const float usage = 100.0f * (1.0f - idle_delta / total_delta);
 
         CpuMonitor::previous_idle = idle;
@@ -44,4 +51,5 @@ float CpuMonitor::get_usage() {
 
         return usage;
     }
+    return 0.0f;
 }
