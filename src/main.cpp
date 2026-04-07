@@ -163,8 +163,13 @@ int main(int, char **) {
   bool show_demo_window = true;
   bool show_another_window = false;
 
-  ImVec4 clear_color = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
-  ImVec4 window_bg_color = ImVec4(0.00f, 0.00f, 0.00f, 0.70f);
+    ImVec4 clear_color = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
+    ImVec4 window_bg_color = ImVec4(0.00f, 0.00f, 0.00f, 0.70f);
+
+    CpuMonitor CpuMonitor;
+
+    float cpu_usage = 0;
+    static float last_cpu_update_time = 0.0f;
 
   /*
     bool fahrenheit = false;
@@ -225,11 +230,20 @@ int main(int, char **) {
       static float f = 0.0f;
       static int counter = 0;
 
+      float current_time = ImGui::GetTime();
+
+      if (current_time - last_cpu_update_time >= 1.0f) {
+          cpu_usage = CpuMonitor.get_usage();
+          last_cpu_update_time = current_time;
+      }
+
       ImGui::SetNextWindowPos(ImVec2(0,0));
       ImGui::Begin("Scylla", nullptr, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoDocking);
       // ImGui::TextColored(style.Colors[ImGuiCol_TitleBgActive], "Scylla"),
 
       ImGui::TextDisabled("%.0f FPS", io.Framerate);
+
+      ImGui::Text("%.2f%% CPU", cpu_usage);
 
       ImGui::Checkbox(
           "Demo Window",

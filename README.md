@@ -103,7 +103,6 @@ You should now be able to run `Scylla` to open the application.
 ### TODO
 - CPU
     - temp
-    - usage
 - mem
     - max
     - temp
@@ -115,4 +114,4 @@ You should now be able to run `Scylla` to open the application.
 - net
     - usage
     - down
-    - up  
+    - up
