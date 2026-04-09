@@ -238,8 +238,8 @@ int main(int, char **) {
             float current_time = ImGui::GetTime();
 
             if (current_time - last_secondary_update_time >= 0.75f) {
-                cpu_usage = CpuMonitor.get_usage();
-                ram_usage = RamMonitor.get_usage_percentage();
+                cpu_usage = cpu_monitor.get_usage();
+                ram_usage = ram_monitor.get_usage_percentage();
                 fps = io.Framerate;
                 last_secondary_update_time = current_time;
             }
