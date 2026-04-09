@@ -5,6 +5,7 @@
 
 // my sysmon headers
 #include "CpuMonitor.hpp"
+#include "RamMonitor.hpp"
 
 // c++ core
 #include <stdio.h>
@@ -168,6 +169,9 @@ int main(int, char **) {
     CpuMonitor CpuMonitor;
     float cpu_usage = 0;
 
+    RamMonitor RamMonitor;
+    float ram_usage = 0;
+
     static float last_secondary_update_time = 0.0f;
 
     float fps = io.Framerate;
@@ -235,6 +239,7 @@ int main(int, char **) {
 
             if (current_time - last_secondary_update_time >= 0.75f) {
                 cpu_usage = CpuMonitor.get_usage();
+                ram_usage = RamMonitor.get_usage_percentage();
                 fps = io.Framerate;
                 last_secondary_update_time = current_time;
             }
@@ -249,6 +254,7 @@ int main(int, char **) {
             ImGui::TextDisabled("%.0f FPS", fps);
 
             ImGui::Text("%.2f%% CPU", cpu_usage);
+            ImGui::Text("%.2f%% RAM", ram_usage);
 
             ImGui::Checkbox("Demo Window",
                             &show_demo_window);  // Edit bools storing our
