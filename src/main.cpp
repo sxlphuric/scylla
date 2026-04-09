@@ -166,10 +166,10 @@ int main(int, char **) {
     ImVec4 clear_color = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
     ImVec4 window_bg_color = ImVec4(0.00f, 0.00f, 0.00f, 0.70f);
 
-    CpuMonitor CpuMonitor;
+    CpuMonitor cpu_monitor;
     float cpu_usage = 0;
 
-    RamMonitor RamMonitor;
+    RamMonitor ram_monitor;
     float ram_usage = 0;
 
     static float last_secondary_update_time = 0.0f;
