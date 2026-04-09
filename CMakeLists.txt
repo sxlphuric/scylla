@@ -37,9 +37,10 @@ set(IMGUI_SOURCES
     ${imgui_SOURCE_DIR}/backends/imgui_impl_glfw.cpp
     ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp)
 
-set(SCYLLA_SOURCES src/main.cpp src/CpuMonitor.cpp)
+set(MONITOR_SOURCES src/CpuMonitor.cpp src/RamMonitor.cpp)
 
-add_executable(Scylla ${IMGUI_SOURCES} ${SCYLLA_SOURCES})
+add_executable(Scylla ${IMGUI_SOURCES} ${MONITOR_SOURCES}
+                                            src/main.cpp)
 
 target_include_directories(Scylla PRIVATE ${imgui_SOURCE_DIR}
                                           ${imgui_SOURCE_DIR}/backends src)
